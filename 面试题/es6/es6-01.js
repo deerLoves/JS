@@ -22,4 +22,19 @@
    4、箭头函数和普通函数区别
       this指向 arguments对象
 
+   5、call apply bind
+      call 参数 一个一个传递
+      apply 参数 数组形式传递
+      bind 语法和call一样，区别在于call是立即执行，bind是等待执行
+      let fn = function(a){
+        console.log(this, a)
+      }
+      let obj = { name:"obj" }
+      // this改变为obj了，但是绑定的时候立即执行，当触发点击事件的时候执行的是fn的返回值undefined
+      document.onclick = fn.call(obj)
+      // bind会把fn中的this预处理为obj，此时fn没有执行，当点击的时候才会把fn执行
+      document.onclick = fn.bind(obj)
+      
+   6、for...in 和for...of有什么区别
+
  */
