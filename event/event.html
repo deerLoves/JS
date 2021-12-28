@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    /**
+      "bubbles"，可选，Boolean类型，默认值为 false，表示该事件是否冒泡。
+      "cancelable"，可选，Boolean类型，默认值为 false， 表示该事件能否被取消。
+      "composed"，可选，Boolean类型，默认值为 false，指示事件是否会在影子DOM根节点之外触发侦听器。
+     */
+    const mydiv = document.getElementById('myDiv')
+    // 创建一个支持冒泡且不能被取消的自定义事件
+    const ev = new Event("myOwnEvent", {"bubbles":true, "cancelable":false});
+    ev.data = 'ok'
+    // 冒泡
+    document.addEventListener("myOwnEvent",function(e){
+        console.log("我是自定义事件", 'document');
+        console.log(e.data, 'document');
+    },false);
+    // 单独元素
+    mydiv.addEventListener("myOwnEvent",function(e){
+        console.log("我是自定义事件", 'myDiv');
+        console.log(e.data, 'myDiv');
+    },false);
+    document.dispatchEvent(ev);
+    
+    // 事件可以在任何元素触发，不仅仅是document
+    mydiv.dispatchEvent(ev);
+  </script>
+</body>
+</html>
