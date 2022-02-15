@@ -136,4 +136,12 @@
  * 28、为什么需要使用useCallback
  *  https://www.jianshu.com/p/be8fb469d507
  * 
+ * 29、useEffect && useLayoutEffect
+ *  useEffect在浏览器渲染完成后执行
+    useLayoutEffect在DOM更新后执行
+    useLayoutEffect 总是比 useEffect 先执行，useLayoutEffect里面的callback函数会在DOM更新完成后立即执行,但是会在浏览器进行任何绘制之前运行完成,阻塞了浏览器的绘制.
+    因为useEffect在render之后调用，页面会有一个从0变成1000的短暂闪烁
+    正常情况下，DOM操作很多，等DOM操作完，再去渲染，useLayoutEffect在渲染前，改变DOM
+    https://www.jianshu.com/p/f575eba0d0dd
+ * 
  */

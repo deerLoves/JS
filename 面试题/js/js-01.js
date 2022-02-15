@@ -51,3 +51,26 @@
   这样的话相当于【元素的样式被改变了两次】！整个JavaScript的性能就下来了。必要的时候（对一个元素更改多个样式）我们可以“把他们合在一起”：
     document.style.cssText="background:red;font-size:24;";
 */
+/*
+  4、document.defaultView.getComputedStyle() currentStyle()  obj.style 三种方法区别
+  a. obj.style 这个方法只能JS只能获取写在html标签中的写在style属性中的值（style=”…”），而无法获取定义在<style type="text/css">里面的属性。
+  b. IE中使用的是obj.currentStyle方法，而FF是用的是getComputedStyle方法, 返回当前“element”的css的所有值
+  c. document.defaultView.getComputedStyle(), 其语法为：document.defaultView.getComputedStyle('元素', '伪类')
+*/
+/*
+  5、Element.matches()
+  <li class="endangered">Philippine eagle</li>
+  var birds = document.getElementsByTagName('li');
+  for (var i = 0; i < birds.length; i++) {
+    if (birds[i].matches('.endangered')) {
+      console.log('The ' + birds[i].textContent + ' is endangered!');
+    }
+  }
+*/
+/*
+  6、Node.cloneNode
+  语法：var dupNode = node.cloneNode(deep);
+  node: 将要被克隆的节点
+  dupNode: 克隆生成的副本节点
+  deep: 是否采用深度克隆,如果为true,则该节点的所有后代节点也都会被克隆,如果为false,则只克隆该节点本身.
+*/

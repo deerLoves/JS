@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body onclick="myFunction(event)">
+
+<p>单击此文档中的任何元素。可找出哪个元素触发了 onclick 事件。</p>
+
+<h1>这是一个标题</h1>
+
+<button>这是一个按钮</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) {
+  // var x = event.target;
+  var x = event.currentTarget;
+  document.getElementById("demo").innerHTML = "Triggered by a " + x.tagName + " element";
+}
+</script>
+
+</body>
+</html>

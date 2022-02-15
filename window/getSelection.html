@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+
+<body onmousemove="myFunc()">
+
+<h1>window.getSelection() 方法</h1>
+
+<p>尝试使用鼠标选择此页面上的任何文本:</p>
+
+<p>这是一个段落</p>
+
+<div>这是DIV元素</div>
+
+<p id="result"></p>
+
+<script>
+function myFunc() {
+   var selObj = window.getSelection();
+   document.getElementById("result").innerHTML = selObj;
+}
+</script>
+
+</body>
+</html>
