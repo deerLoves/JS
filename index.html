@@ -10,23 +10,10 @@
   <div id="box" class="box1 box2"></div>
 </body>
 <script>
-  // Make a list
-  var ul = document.createElement('ul');
-  document.body.appendChild(ul);
-
-  var li1 = document.createElement('li');
-  var li2 = document.createElement('li');
-  ul.appendChild(li1);
-  ul.appendChild(li2);
-
-  function hide(e){
-    // e.target 引用着 <li> 元素
-    // 不像 e.currentTarget 引用着其父级的 <ul> 元素.
-    console.log(e.target)
-    e.target.style.visibility = 'hidden';
-  }
-
-  // 添加监听事件到列表，当每个 <li> 被点击的时候都会触发。
-  ul.addEventListener('click', hide, false);
+  const a = "123abc456ww"
+  let pattern = /([0-9]*)([a-z]*)([0-9]*)/g
+  // match:如果有g全局标志,那么返回的数组保存的是所有匹配的内容，不包括子匹配
+  console.log(a.match(pattern))
+  console.log(pattern.exec(a))
 </script>
 </html>

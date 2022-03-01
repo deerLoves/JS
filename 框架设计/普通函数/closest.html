@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="box">
+    <div class="d1 d2">
+      <p class="p1">
+        <b class="b1">123</b>
+      </p>
+    </div>
+    <div class="d2"></div>
+    <div class="d3"></div>
+  </div>
+  <script src="./closest.js"></script>
+  <script>
+    // const ct = _closest(document.querySelector('.b1'), '.d1.d2', document)
+    const ct = _closest(document.querySelector('.b1'), 'div', document)
+    console.log(ct)
+  </script>
+</body>
+</html>

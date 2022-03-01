@@ -1,0 +1,55 @@
+{
+	"folders": [
+		{
+			"name": "om-ds-ui",
+			"path": "../../../../../Company_repo/om-ds-ui"
+		},
+		{
+			"name": "okspin-ds-ui",
+			"path": "../../../../../Company_repo/okspin-ds-ui"
+		},
+		{
+			"name": "om-ds-mobile",
+			"path": "../../../../Vue/om-ds-mobile"
+		},
+		{
+			"name": "okspin-news-ui",
+			"path": "../../../../../Company_repo/okspin-news-ui"
+		},
+		{
+			"name": "QianKun",
+			"path": "../../../QianKun"
+		},
+		{
+			"name": "Vue",
+			"path": "../../../Vue"
+		},
+		{
+			"path": "../../../../Ant Design Pro/pro-01"
+		},
+		{
+			"path": "../../../../React"
+		},
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../React"
+		},
+		{
+			"path": "../../../../../okspin-ds-ui-copy"
+		},
+		{
+			"path": "../../../../../Company_repo/sdk.template"
+		},
+		{
+			"path": "../../../../../Company_repo/adtadn-dashboard-ui"
+		},
+		{
+			"path": "../../../copy_deer/Sortable"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

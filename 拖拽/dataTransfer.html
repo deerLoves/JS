@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #section {
+      width: 1000px;
+      height: 200px;
+      margin: 0 auto;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+      text-align: center;
+      line-height: 200px;
+    }
+    .itemBox {
+      width: 1000px;
+      height: 200px;
+      margin: 100px auto;
+      border: 1px dashed #ccc;
+      border-radius: 8px;
+      display: flex;
+      padding: 24px;
+    }
+    .item {
+      width: 100px;
+      height: 100px;
+      border: 1px dashed cornflowerblue;
+      border-radius: 4px;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!--投放区-->
+  <div id="section">drag box here</div>
+  <div class="itemBox">
+    <div class="item" draggable="true">Item 1</div>
+  </div>
+  <script>
+    const section = document.querySelector('#section')
+    const target = document.querySelector('.item')
+    target.ondragstart = function (event) {
+      const e = event || window.event
+      // 此时样式已换成了move样式
+      e.dataTransfer.effectAllowed = 'copy'
+      console.log(e.dataTransfer.effectAllowed)
+    }
+    section.ondragover = function (event) {
+      const e = event || window.event
+      e.preventDefault()
+      //拖拽元素进入投放区时，鼠标样式变为move
+      e.dataTransfer.dropEffect = 'link'
+      console.log(e.dataTransfer.dropEffect)
+    }
+  </script>
+</body>
+</html>
